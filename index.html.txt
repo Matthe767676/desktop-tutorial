@@ -35,18 +35,12 @@
       display: none;
       margin-top: 30px;
     }
-    iframe {
-      border: none;
-      margin-top: 20px;
-      width: 90%;
-      height: 500px;
-    }
   </style>
 </head>
 <body>
 
   <header>
-    BLK Classroom
+     Classroom
   </header>
 
   <div id="login">
@@ -58,7 +52,10 @@
   <div id="searchSection">
     <h2>Welcome to Class</h2>
     <p>Start your research securely:</p>
-    <iframe src="https://lite.duckduckgo.com/lite/"></iframe>
+    <form action="https://duckduckgo.com/" method="GET" target="_blank">
+      <input type="text" name="q" placeholder="Search DuckDuckGo...">
+      <button type="submit">Search</button>
+    </form>
   </div>
 
   <script>
