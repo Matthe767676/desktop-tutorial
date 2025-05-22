@@ -6,52 +6,74 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 100px;
-      background-color: #f0f0f0;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      color: #4285f4;
+    header {
+      background-color: #4285f4;
+      color: white;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
     }
-    #searchSection {
-      display: none;
-      margin-top: 30px;
+    #login {
+      margin-top: 80px;
     }
     input[type="text"] {
       padding: 10px;
       font-size: 16px;
+      width: 250px;
     }
     button {
       padding: 10px 20px;
       font-size: 16px;
       margin-left: 10px;
+      cursor: pointer;
+    }
+    #searchSection {
+      display: none;
+      margin-top: 30px;
     }
     iframe {
+      border: none;
       margin-top: 20px;
+      width: 90%;
+      height: 500px;
     }
   </style>
 </head>
 <body>
-  <h1>Join BLK Classroom</h1>
-  <p>Enter your class code below:</p>
-  <input type="text" id="gameCode" placeholder="Enter Code">
-  <button onclick="checkCode()">Join Class</button>
+
+  <header>
+    BLK Classroom
+  </header>
+
+  <div id="login">
+    <p>Enter your class code to join:</p>
+    <input type="text" id="gameCode" placeholder="Enter Code">
+    <button onclick="checkCode()">Join Class</button>
+  </div>
 
   <div id="searchSection">
-    <h2>Classroom Unlocked</h2>
-    <p>Welcome! Start your research below:</p>
-    <iframe src="https://lite.duckduckgo.com/lite/" width="90%" height="500"></iframe>
+    <h2>Welcome to Class</h2>
+    <p>Start your research securely:</p>
+    <iframe src="https://lite.duckduckgo.com/lite/"></iframe>
   </div>
 
   <script>
     function checkCode() {
       const correctCode = "AMD the best";
       const enteredCode = document.getElementById("gameCode").value;
-      if (enteredCode === correctCode) {
+      if (enteredCode.trim() === correctCode) {
+        document.getElementById("login").style.display = "none";
         document.getElementById("searchSection").style.display = "block";
       } else {
         alert("Wrong class code. Try again.");
       }
     }
   </script>
+
 </body>
 </html>
+
