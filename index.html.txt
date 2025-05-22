@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BLK Classroom</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #4285f4;
+    }
+    #searchSection {
+      display: none;
+      margin-top: 30px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    iframe {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Join BLK Classroom</h1>
+  <p>Enter your class code below:</p>
+  <input type="text" id="gameCode" placeholder="Enter Code">
+  <button onclick="checkCode()">Join Class</button>
+
+  <div id="searchSection">
+    <h2>Classroom Unlocked</h2>
+    <p>Welcome! Start your research below:</p>
+    <iframe src="https://lite.duckduckgo.com/lite/" width="90%" height="500"></iframe>
+  </div>
+
+  <script>
+    function checkCode() {
+      const correctCode = "AMD the best";
+      const enteredCode = document.getElementById("gameCode").value;
+      if (enteredCode === correctCode) {
+        document.getElementById("searchSection").style.display = "block";
+      } else {
+        alert("Wrong class code. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
